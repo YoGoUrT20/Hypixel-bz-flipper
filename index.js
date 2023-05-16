@@ -41,7 +41,7 @@ function update() {
 
   const toTitleCase = str => str.replace(/(^\w|\s\w)(\S*)/g, (_,m1,m2) => m1.toUpperCase()+m2.toLowerCase());
 
-  $.getJSON("https://api.hypixel.net/skyblock/bazaar?key=7c531fa2-f2b4-47bc-8156-b0846f0f2519", function (data) {
+  $.getJSON("https://api.hypixel.net/skyblock/bazaar?key=TOKEN", function (data) {
     //console.log(Object.values(data.products));
     goods = Object.values(data.products).filter((a) => !ignoreGoods.includes(a.product_id));
     //console.log(goods);
